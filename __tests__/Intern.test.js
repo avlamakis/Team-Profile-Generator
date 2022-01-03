@@ -1,7 +1,7 @@
 //utilizes the intern construct
 const Intern = require('../lib/Intern');
 
-//created intern object  
+//created intern object  with school info
 test('creates an Intern object', () => {
     const intern = new Intern('alex', 21, 'alexvlamakis@gmail', 'UofU');
     
