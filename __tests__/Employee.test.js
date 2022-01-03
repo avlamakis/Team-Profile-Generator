@@ -1,7 +1,7 @@
-// using Employee constructor 
+// utilizes the employee constructor    
 const Employee = require('../lib/Employee');
 
-// creates employee object 
+//creates an employee objet
 test('creates an employee object', () => {
     const employee = new Employee('Alex', 21, '');
 
