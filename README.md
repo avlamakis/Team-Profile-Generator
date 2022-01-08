@@ -1,7 +1,7 @@
 # Team-Profile-Generator
 
 ## Licensing
-None (AS IS) (https://img.shields.io/badge/license-MIT-brightorange)
+None (AS IS)
 
 [https://choosealicense.com/](https://choosealicense.com/)
 
@@ -20,10 +20,11 @@ A Command-line application which generates a Index.HTML based upon user inputs w
 To install this app you will need to run NPM install for the following dependencies in your CLI: Inquirer,fs, jest, and util. This will allow the question prompts from the CLI for you to generate the Index.HTML file.
 
 ## Usage:
-
+https://watch.screencastify.com/v/0qCOtMSrblVuhFcXxPGb
 
 ## Screenshot
 
+![Screenshot 2022-01-07 190625](https://user-images.githubusercontent.com/91172337/148627492-56296094-9741-4b1f-97e4-ff6183162850.png)
 
 
 ## License:
@@ -45,7 +46,7 @@ https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
 https://choosealicense.com/
 
 ## Testing:
-N/A
+https://watch.screencastify.com/v/wmzdsjePWswZYnuspZC8
 
 ## Questions:
 Github: https://github.com/avlamakis
