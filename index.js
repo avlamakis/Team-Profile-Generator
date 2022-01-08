@@ -6,11 +6,13 @@ const Manager = require("./lib/Manager");
 
 const employees = [];
 
+// function to initialize the app and start html with function of add member
 function initApp() {
     startHtml();
     addMember();
 }
-//function to add members with user input according to messages for name, email, role, and ID
+
+//add member function created with user input to create team members name, email, info, and id
 function addMember() {
     inquirer.prompt([{
         message: "Enter team member's name",
@@ -32,8 +34,49 @@ function addMember() {
     },
     {
         message: "Enter team member's email address",
-        name: "id"
+        name: "email"
     }])
-    .then(function({name, role, id, email}){
+    .then(function({name, role, id, email}) {
         let roleInfo = "";
-    })
+        if (role === "Engineer") {
+            roleInfo = "GitHub username";
+        } else if (role === "Intern") {
+            roleInfo = "school name";
+        } else {
+            roleInfo = "office phone number";
+        }
+        inquirer.prompt([{
+            message: `Enter team member's ${roleInfo}`,
+            name: "roleInfo"
+        },
+        {
+            type: "list",
+            message: "Would you like to add more team members?",
+            choices: [
+                "yes",
+                "no"
+            ],
+            name: "moreMembers"
+        }])
+        .then(function({roleInfo, moreMembers}) {
+            let newMember;
+            if (role === "Engineer") {
+                newMember = new Engineer(name, id, email, roleInfo);
+            } else if (role === "Intern") {
+                newMember = new Intern(name, id, email, roleInfo);
+            } else {
+                newMember = new Manager(name, id, email, roleInfo);
+            }
+            employees.push(newMember);
+            addHtml(newMember)
+            .then(function() {
+                if (moreMembers === "yes") {
+                    addMember();
+                } else {
+                    finishHtml();
+                }
+            });
+            
+        });
+    });
+}
