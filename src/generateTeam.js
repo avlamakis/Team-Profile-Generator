@@ -32,8 +32,8 @@ let generateManagerCard = (Manager) => {
       <h3 class="card-title ">${Manager.getName()}</h3>
       <h6 class="card-text"><i class="fa fa-coffee"></i> ${Manager.getRole()}</h6>
     </div>
-    <div class="card-body bg-info text-light">
-      <ul class="list-group list-group-flush">
+    <div class="card-body bg-info">
+      <ul class="list-group list-group-flush text-primary">
         <li class="list-group-item">ID: ${Manager.getId()}</li>
         <li class="list-group-item">Email: ${Manager.getEmail()}</li>
         <li class="list-group-item">Office Number: ${Manager.getOfficeNumber()}</li>
@@ -50,8 +50,8 @@ let generateEngineerCard = (Engineer) => {
       <h3 class="card-title">${Engineer.getName()}</h3>
       <h6 class="card-text"><i class="fa fa-laptop"></i> ${Engineer.getRole()}</h6>
     </div>
-    <div class="card-body bg-info text-light">
-      <ul class="list-group list-group-flush">
+    <div class="card-body bg-info">
+      <ul class="list-group list-group-flush text-primary">
         <li class="list-group-item">ID: ${Engineer.getId()}</li>
         <li class="list-group-item">Email: ${Engineer.getEmail()}</li>
         <li class="list-group-item">GitHub: ${Engineer.getGithub()}</li>
@@ -68,8 +68,8 @@ let generateInternCard = (Intern) => {
       <h3 class="card-title">${Intern.getName()}</h3>
       <h6 class="card-text"><i class="fa fa-graduation-cap"></i> ${Intern.getRole()}</h6>
     </div>
-    <div class="card-body bg-info text-light">
-      <ul class="list-group list-group-flush">
+    <div class="card-body bg-info">
+      <ul class="list-group list-group-flush text-primary">
         <li class="list-group-item">ID: ${Intern.getId()}</li>
         <li class="list-group-item">Email: ${Intern.getEmail()}</li>
         <li class="list-group-item">School: ${Intern.getSchool()}</li>
